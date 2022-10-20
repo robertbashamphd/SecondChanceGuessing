@@ -1,8 +1,11 @@
 # SecondChanceGuessing
-Algorithms used in the paper "An Evaluation of the Effectiveness of the Second Chance Protocol for Reducing Underperformance During Intellectual Testing",
-Robert B. Basham and Katharine E. St. Jules, under review, October 2022.
+This is the code listing of algorithms used in the paper:
 
-This will generate the distribution of false positives (FPs), aka lucky guesses, under the specified circumstances. The distribution is returned as a Pythong dictionary, structured as {NFP: frequency}. See comments and docstrings for further details about using the algorithms.
+Basham, R. B. & St. Jules, K. E. (2022). An Evaluation of the Effectiveness of the Second Chance Protocol for Reducing Underperformance During Intellectual Testing [Manuscript submitted for publication]. Northwest Psychometric Research Institute, Portland, OR, USA.
+
+This code will generate the distribution of false positives (FPs), "lucky guesses", under the specified circumstances. The distribution is returned as a Python dictionary, structured as {n_fp: frequency}. See comments and docstrings for further details about using the algorithms.
+
+Right-click on the "SecondChanceGuessing" title, above, to copy the link to this repository, which can be used to download it into your IDE. For example, if using PyCharm, create a new project then navigate to VCS/Get From Version Control...
 
 This is free software, per GNU.
 
