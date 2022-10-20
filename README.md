@@ -7,4 +7,4 @@ This code will generate the distribution of false positives (FPs), "lucky guesse
 
 Right-click on the "SecondChanceGuessing" title, above, to copy the link to this repository, which can be used to download it into your IDE. For example, if using PyCharm, create a new project then navigate to VCS/Get From Version Control... and paste the link into the URL: field.
 
-This is free software, under GNU GPL v3.
+This software is open source, under GNU GPL v3.
