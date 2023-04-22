@@ -9,4 +9,3 @@ Right-click on the "SecondChanceGuessing" title, above, to copy the link to this
 
 This software is open source, under GNU General Public License v3.0.
 
-# This is a second header.
