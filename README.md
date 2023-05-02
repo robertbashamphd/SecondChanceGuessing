@@ -5,6 +5,6 @@ Basham, R. B. & St. Jules, K. E. (2023). An Evaluation of the Effectiveness of t
 
 This code will generate the distribution of false positives (FPs), under the specified circumstances. See comments and docstrings for further details about using the algorithms.
 
-Right-click on the "SecondChanceGuessing" title in the upper left corner of the screen and select Copy Link to copy the link to this repository, which can be used to download it directly into your IDE. For example, if using PyCharm, create a new project then navigate to VCS/Get From Version Control... and paste the link into the URL: field.
+To copy the link to this repository, right-click on the "SecondChanceGuessing" title in the upper left corner of the screen and select Copy Link. This link may be used to download the python code directly into your IDE. For example, if using PyCharm, create a new project then navigate to VCS/Get From Version Control... and paste the link into the URL: field. 
 
 This software is open source, under GNU General Public License v3.0.
