@@ -17,8 +17,8 @@ Run this file or call test_guessing() to calculate the distribution used for Tab
 Requires Python 3.5 due to the typing module. If type hints are removed, should run under earlier
 versions of Python 3.
 
-If the algorithm is running correctly, test_guessing(do_verify=True) should return the following table
-and the console output will verify that it passed the validity test. If this fails, call 
+If the algorithm is running correctly, test_guessing(do_verify=True) should return the following 
+table and the console output will verify that it passed the validity test. If this fails, call 
 test_guessing(do_verify=False) and it should return something close to the 
 following table with mean raw score increase = 1.38 +/- .01
 
