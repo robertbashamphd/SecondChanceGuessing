@@ -1,7 +1,7 @@
 # SecondChanceGuessing
 This is the code listing of algorithms used in the paper:
 
-Basham, R. B. & St. Jules, K. E. (2023). An Evaluation of the Effectiveness of the Second Chance Protocol for Reducing Underperformance During Intellectual Testing [Manuscript submitted for review]. Northwest Psychometric Research Institute, Portland, OR, USA.
+Basham, R. B. & St. Jules, K. E. (2023). An Evaluation of the Effectiveness of the Second Chance Protocol for Reducing Underperformance During Intellectual Testing [Manuscript submitted for review].
 
 This code will generate the distribution of false positives (FPs), under the specified circumstances. See comments and docstrings for further details about using the algorithms.
 
