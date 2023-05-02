@@ -95,10 +95,10 @@ def compute_guessing_trial(sa_items: str,
     beyond the SA items will be given until a SC ceiling is established, or the end of the scale
     is reached.
 
-    PERFORMANCE NOTE: The is not optimized for performance. Calls to
+    PERFORMANCE NOTE: The is not optimized for readability, not performance. Calls to
     last_items_deq.append(item_score) and sum(last_items_deq) account for almost 50% of
     the execution time. Using a list instead of a deque doesn't help. Typical execution time
-    is around 450 ms for 100K calls, or 4.5 micros per call.
+    is around 300 - 500 ms for 100K calls.
     """
     n_fps, last_items_deq, sa_length = 0, deque(maxlen=ceiling_n), len(sa_items)
     start_off = sa_items.find('0')  # Offset of first SA fail, first SC item
@@ -328,18 +328,18 @@ def test_guessing(random_seed: Optional[int] = 1,
 
 if __name__ == '__main__':
     binom_pdf_lookup(0, 5, 1/5)
-    binom_pdf_lookup(0, 6, 1/5)
-    binom_pdf_lookup(0, 7, 1/5)
-    binom_pdf_lookup(0, 8, 1/5)
-    binom_pdf_lookup(0, 9, 1/5)
-    print(f'\n')
+    # binom_pdf_lookup(0, 6, 1/5)
+    # binom_pdf_lookup(0, 7, 1/5)
+    # binom_pdf_lookup(0, 8, 1/5)
+    # binom_pdf_lookup(0, 9, 1/5)
+    # print(f'\n')
     binom_cdf_lookup(0, 6, 1/5)
-    binom_cdf_lookup(1, 6, 1/5)
-    binom_cdf_lookup(2, 6, 1/5)
-    binom_cdf_lookup(3, 6, 1/5)
-    binom_cdf_lookup(4, 6, 1/5)
-    binom_cdf_lookup(5, 6, 1/5)
-    binom_cdf_lookup(6, 6, 1/5)
+    # binom_cdf_lookup(1, 6, 1/5)
+    # binom_cdf_lookup(2, 6, 1/5)
+    # binom_cdf_lookup(3, 6, 1/5)
+    # binom_cdf_lookup(4, 6, 1/5)
+    # binom_cdf_lookup(5, 6, 1/5)
+    # binom_cdf_lookup(6, 6, 1/5)
 
     test_guessing(do_verify=True)
 
