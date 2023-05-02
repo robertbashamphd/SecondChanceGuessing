@@ -95,7 +95,7 @@ def compute_guessing_trial(sa_items: str,
     beyond the SA items will be given until a SC ceiling is established, or the end of the scale
     is reached.
 
-    PERFORMANCE NOTE: The is not optimized for performance. Calls to
+    PERFORMANCE NOTE: The is not optimized for readability, not performance. Calls to
     last_items_deq.append(item_score) and sum(last_items_deq) account for almost 50% of
     the execution time. Using a list instead of a deque doesn't help. Typical execution time
     is around 450 ms for 100K calls, or 4.5 micros per call.
