@@ -7,8 +7,9 @@ from sortedcontainers import SortedDict
 from scipy.stats import binom
 
 """
-These are the algorithms used to correct a raw score for guessing on a multiple choice
-test that uses a ceiling, such as an IQ test. The procedure and context is given in:
+These are the algorithms used to correct a raw score for guessing during Second Chance 
+on a multiple choice test that uses a ceiling, such as an IQ test. The procedure and 
+context is given in:
 
 Basham, R.B. & St. Jules, K.E. (2023). An Evaluation of the Effectiveness of the Second 
     Chance Protocol for Reducing Underperformance During Intellectual Testing", under review.
@@ -163,7 +164,6 @@ def calc_second_chance_stats(sa_responses: str,
     sa_response is a string of responses during standard administration,
     where '2' = pass, '1' = fail.
     """
-
     final_responses = sa_responses.replace('1', '0')
     final_responses = final_responses.replace('2', '1')
 
@@ -179,7 +179,7 @@ def calc_second_chance_stats(sa_responses: str,
 
     if n_readmin_same:
         # binom.cdf() params are k, n, p.
-        gte_same_binom_prob = 1 - float(binom.cdf(n_readmin_same-1, n_readmin_fail, base_rate))
+        gte_same_binom_prob = 1.0 - float(binom.cdf(n_readmin_same-1, n_readmin_fail, base_rate))
     else:
         gte_same_binom_prob = 1.0
 
@@ -226,8 +226,8 @@ def calc_second_chance_stats(sa_responses: str,
 
 def compute_sc_value_ranges(n_trials: int = 100):
     """Repeatedly call test_guessing() to determine the min and max frequencies for
-    each number of FPs for n_trials."""
-
+    each number of FPs for n_trials.
+    """
     smallest, greatest = SortedDict(), SortedDict()
     start_pc = time.perf_counter()
     for x in range(n_trials):
@@ -236,7 +236,6 @@ def compute_sc_value_ranges(n_trials: int = 100):
         mean, prob, dist = result_tuple
 
         for key, val in dist.items():
-            # debug1 = smallest[key] if key in smallest else None
             if key not in smallest or val < smallest[key]:
                 smallest[key] = val
             if key not in greatest or val > greatest[key]:
