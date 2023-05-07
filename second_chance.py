@@ -20,7 +20,7 @@ versions of Python 3.
 If the algorithm is running correctly, test_guessing(do_verify=True) should return the following 
 table and the console output will verify that it passed the validity test. If this fails, call 
 test_guessing(do_verify=False) and it should return something close to the 
-following table with mean raw score increase = 1.38 +/- .01
+following table with mean raw score increase = 1.39 +/- .01
 
 Frequency distribution of estimated raw score increases due to FPs, 
    do_adjust_prob = False, for 100,000 trials:
