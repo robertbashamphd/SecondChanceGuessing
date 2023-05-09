@@ -98,10 +98,9 @@ def compute_guessing_trial(sa_items: str,
     beyond the SA items will be given until a SC ceiling is established, or the end of the scale
     is reached.
 
-    PERFORMANCE NOTE: This function is written for readability, not performance. Calls to
-    last_items_deq.append(item_score) and sum(last_items_deq) account for almost 50% of
-    the execution time. Using a list instead of a deque doesn't help. Typical execution time
-    is around 300 - 500 ms for 100K calls.
+    PERFORMANCE NOTE: Calls to last_items_deq.append(item_score) and sum(last_items_deq) account
+    for almost half of the execution time. Using a list instead of a deque doesn't help.
+    Typical execution time is 300 - 500 ms for 100K calls.
     """
     n_fps, last_items_deq, sa_length = 0, deque(maxlen=ceiling_n), len(sa_items)
     start_off = sa_items.find('0')  # Offset of first SA fail, first SC item
