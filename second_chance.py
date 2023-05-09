@@ -99,8 +99,8 @@ def compute_guessing_trial(sa_items: str,
     is reached.
 
     PERFORMANCE NOTE: Calls to last_items_deq.append(item_score) and sum(last_items_deq) account
-    for almost half of the execution time. Using a list instead of a deque doesn't help.
-    Typical execution time is 300 - 500 ms for 100K calls.
+    for almost half of the execution time. Using a list instead of a deque doesn't result in
+    much speed increase. Typical execution time is 300 - 500 ms for 100K calls.
     """
     n_fps, last_items_deq, sa_length = 0, deque(maxlen=ceiling_n), len(sa_items)
     start_off = sa_items.find('0')  # Offset of first SA fail, first SC item
